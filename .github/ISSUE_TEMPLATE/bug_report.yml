@@ -1,0 +1,41 @@
+name: 🐞 버그 신고 / 不具合報告
+description: 동작이 이상할 때 / うまく動かないとき
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 무슨 일이 있었나요? / 何が起きましたか？
+      placeholder: 예) 답장 제목줄을 찾지 못하고 멈춤 / 例) 返信の見出しが見つからず停止
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 입력 방식 / 入力方式
+      options:
+        - 마우스 / マウス
+        - 키보드 / キーボード
+    validations:
+      required: true
+  - type: input
+    id: resolution
+    attributes:
+      label: 게임 해상도 / ゲーム解像度
+      placeholder: 1920x1080
+  - type: input
+    id: version
+    attributes:
+      label: 프로그램 버전 / バージョン
+      placeholder: v1.0.0
+  - type: textarea
+    id: log
+    attributes:
+      label: 로그 / ログ
+      description: "%AppData%\\MomotalkAutoJP\\log.txt 의 마지막 부분 / の最後の部分"
+      render: text
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 스크린샷 / スクリーンショット
+      description: 있으면 첨부해 주세요 / あれば添付してください
