@@ -120,7 +120,7 @@ namespace MomotalkAutoJP.Views
 
             // '화면 그대로' 방식은 보이는 대로 찍으므로 이 창을 잠깐 화면 밖으로 치움
             double oldLeft = Left;
-            bool moveAway = S.Capture == CaptureMode.Screen;
+            bool moveAway = S.Capture == Core.CaptureMode.Screen;
             if (moveAway)
             {
                 Left = -32000;
